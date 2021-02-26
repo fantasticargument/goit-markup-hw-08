@@ -1,0 +1,49 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 696px;
+  height: 120px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  &-section {
+    background-color: $background-primery;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 95px;
+    max-width: 1600px;
+    height: 600px;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../../images/Герой/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+  }
+
+  &-title {
+    @include fon(900, 44px, 1.364, 00.06em);
+    text-transform: uppercase;
+    color: $white-color;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &-button {
+    @include fon(700, 16px, 1.875, 00.06em);
+
+    text-align: center;
+
+    color: $white-color;
+    background: $accent-color;
+    min-width: 200px;
+    min-height: 50px;
+    border-radius: 4px;
+  }
+}

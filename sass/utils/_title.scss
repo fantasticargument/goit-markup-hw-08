@@ -1,0 +1,5 @@
+.title {
+  @include fon(700, 36px, 1.167, 0.03em);
+  text-align: center;
+  color: $primary-text-color;
+}

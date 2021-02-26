@@ -1,0 +1,76 @@
+.card-titel {
+  @include fon(700, 18px, 2, 0.06em);
+  color: $primary-text-color;
+}
+
+.card-text {
+  @include fon(400, 16px, 1.875, 0.03em);
+  color: $accent-text-color;
+  margin-top: 4px;
+}
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+  margin-bottom: 94px;
+}
+
+.card-link {
+  display: block;
+  transition-property: background-color;
+  transition: $delay $function;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.card-link:hover .card-box-item,
+.card-link:focus .card-box-item {
+  transform: translateY(0);
+}
+
+.card-box-item {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform $delay $function;
+  position: absolute;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-list > .card-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.card-content {
+  padding: 20px 24px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-top-width: 0px;
+}
+
+.card-thumb {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.card-box-text {
+  @include fon(400, 18px, 1.556, 0.03em);
+  color: $white-color;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

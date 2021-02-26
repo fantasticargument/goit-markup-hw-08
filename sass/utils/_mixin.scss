@@ -1,0 +1,12 @@
+@mixin fon($weight, $size, $height, $spacing) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+}
+
+@mixin icon($width, $height, $color) {
+  width: $width;
+  height: $height;
+  fill: $color;
+}

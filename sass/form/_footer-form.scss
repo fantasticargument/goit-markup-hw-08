@@ -1,0 +1,54 @@
+.footer-form {
+  display: flex;
+  margin-left: auto;
+  margin-top: 12px;
+
+  &-submit {
+    min-width: 200px;
+    height: 50px;
+    @include fon(700, 16px, 1.875, 0.06em);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: $white-color;
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: 0;
+    border-radius: 4px;
+    margin-top: 36px;
+    padding: 10px;
+  }
+
+  &-title {
+    @include fon(bold, 14px, 0.875, 0.03em);
+    text-transform: uppercase;
+    color: $white-color;
+    border-radius: 4px;
+  }
+
+  &-submit-icon {
+    @include icon(24px, 24px, currentColor);
+    align-items: center;
+    margin-left: 10px;
+  }
+
+  &-meil {
+    width: 358px;
+    height: 50px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: $background-primery;
+    @include fon(normal, 16px, 1.25, 0.03em);
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-top: 24px;
+    margin-right: 12px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}

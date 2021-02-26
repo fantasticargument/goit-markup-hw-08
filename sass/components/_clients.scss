@@ -1,0 +1,42 @@
+.clients .title {
+  margin-top: 109px;
+  margin-bottom: 50px;
+}
+
+.client-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-item {
+  margin-bottom: 79px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.client-icon {
+  @include icon(88.5px, 52px, currentColor);
+}
+
+.client-link {
+  display: flex;
+  width: 170px;
+  height: 90px;
+  border: 1px solid currentColor;
+  box-sizing: border-box;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  color: $social-networks;
+
+  transition-property: background-color;
+  transition: $delay $function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}

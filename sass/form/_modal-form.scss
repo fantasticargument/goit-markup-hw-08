@@ -1,0 +1,199 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity $delay $function;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  &.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+}
+
+.modal {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 528px;
+  min-height: 581px;
+
+  background-color: $white-color;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform $delay $function;
+
+  padding: 40px;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  &-closed-batton {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: $white-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    box-sizing: border-box;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    &-ing {
+      @include icon(11px, 11px, currentColor);
+      display: flex;
+    }
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
+
+.form-caption {
+  @include fon(700, 20px, 1.15, 0.03em);
+  display: flex;
+  text-align: center;
+  color: $primary-text-color;
+  margin-bottom: 12px;
+}
+
+.form-field {
+  margin-bottom: 10px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 4px;
+  @include fon(normal, 12px, 1.1667, 0.01em);
+  color: $accent-text-color;
+}
+
+.form-item {
+  position: relative;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.form-item-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  transition: background-color $delay $function;
+}
+
+.form-input {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  padding: 8px;
+
+  border-radius: 4px;
+  padding-left: 42px;
+  font-size: 16px;
+  outline: none;
+  transition: background-color $delay $function;
+
+  &:focus {
+    outline: none;
+    border-color: $accent-color;
+
+    & + .form-item-icon {
+      fill: $accent-color;
+    }
+  }
+}
+
+.feedback {
+  resize: none;
+  height: 120px;
+  padding-left: 12px;
+  margin-bottom: 20px;
+  @include fon(normal, 12px, 1.16667, 0.01em);
+
+  & ::placeholder {
+    resize: none;
+  }
+}
+
+.form-input::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+label .footer-form-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-form-label {
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+
+  &::before {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 1px;
+    content: '';
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  span {
+    vertical-align: middle;
+  }
+}
+.checkbox-form-input:checked + .checkbox-form-label::before {
+  background-color: $accent-color;
+  background-image: url(../../images/галочка/Vector.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: $accent-color;
+  border-radius: 2px;
+}
+
+.checkbox-form-input:focus + .checkbox-form-label::before {
+  outline: 1px solid blue;
+}
+
+.modal-check-contract {
+  @include fon(normal, 14px, 0.583, 0.03em);
+  color: $accent-text-color;
+}
+
+.form-contract {
+  color: $accent-color;
+  text-decoration: underline;
+}
+
+.submit-button {
+  background-color: $accent-color;
+  min-width: 200px;
+  min-height: 50px;
+  margin-left: 30%;
+
+  color: $white-color;
+  @include fon(bold, 16px, 1.875, 0.06em);
+  left: 50%;
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}

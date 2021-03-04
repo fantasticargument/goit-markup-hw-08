@@ -1,18 +1,4 @@
-.logo {
-  font-family: Raleway;
-  @include fon(500, 26px, 1.192, 0.03em);
-  color: $accent-color;
-
-  &-color-header {
-    color: $primary-text-color;
-  }
-  .header & {
-    font-family: Raleway;
-    margin-right: 93px;
-  }
-}
-
-.header {
+/*.header {
   @include fon(500, 14px, 1.143, 0.02em);
   border: 1px solid #ececec;
   padding-top: 25px;
@@ -91,3 +77,4 @@
   @include icon(16px, 12px, currentColor);
   margin-right: 10px;
 }
+*/

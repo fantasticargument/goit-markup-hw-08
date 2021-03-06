@@ -1,4 +1,18 @@
-/*.header {
+/*.logo {
+  font-family: Raleway;
+  @include fon(500, 26px, 1.192, 0.03em);
+  color: $accent-color;
+
+  &-color-header {
+    color: $primary-text-color;
+  }
+  .header & {
+    font-family: Raleway;
+    margin-right: 93px;
+  }
+}
+
+.header {
   @include fon(500, 14px, 1.143, 0.02em);
   border: 1px solid #ececec;
   padding-top: 25px;
@@ -78,3 +92,202 @@
   margin-right: 10px;
 }
 */
+
+.logo {
+  font-family: Raleway;
+  @include fon(400, 24px, 1.167, 0.03em);
+  color: $accent-color;
+
+  &-color-header {
+    color: $primary-text-color;
+  }
+
+  .header & {
+    font-family: Raleway;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sait-nav-list {
+    display: none;
+  }
+  .adress-header {
+    display: none;
+  }
+  .burger-dutton {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  .burger-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    background-color: $white-color;
+    width: 100%;
+    max-width: 480px;
+    height: 100vh;
+    padding: 48px 40px;
+    transition: transform 500ms linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &.is-open {
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+
+  .mobile-nav-link {
+    @include fon(500, 40px, 1.175, 0.02em);
+    color: currentColor;
+
+    &-current {
+      color: $accent-color;
+    }
+  }
+
+  .mobile-nav-item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  .mob-contakt {
+    margin-bottom: 64px;
+    &-item:not(:last-child) {
+      margin-bottom: 32px;
+    }
+    &-tel {
+      @include fon(500, 34px, 1.176, 0.02em);
+      font-style: normal;
+      color: $accent-color;
+    }
+    &-address {
+      @include fon(500, 24px, 1.667, 0.02em);
+      font-style: normal;
+      color: $accent-text-color;
+    }
+  }
+
+  .mob-social {
+    display: flex;
+    flex-wrap: wrap;
+    &-item:not(:last-child) {
+      margin-right: 20px;
+    }
+    &-link {
+      @include fon(500, 18px, 1.222, 0.02em);
+      color: $accent-color;
+    }
+  }
+
+  .closed-batton {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+
+    &-ing {
+      @include icon(40px, 40px, currentColor);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .burger-dutton {
+    display: none;
+  }
+  .mobile-menu {
+    display: none;
+  }
+  .sait-nav {
+    display: flex;
+    align-items: center;
+
+    &-list {
+      margin-left: 88px;
+      display: flex;
+    }
+
+    &-link {
+      @include fon(500, 14px, 1.143, 0.02em);
+      color: $primary-text-color;
+      position: relative;
+
+      &-current {
+        color: $accent-color;
+      }
+
+      &-current::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        left: 0;
+        bottom: -22px;
+        background: $accent-color;
+        border-radius: 2px;
+      }
+    }
+
+    &-item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+  .adress-header {
+    margin-left: auto;
+    &-item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  .adress-header-link {
+    @include fon(500, 12px, 1.667, 0.02em);
+    font-style: normal;
+    color: $accent-text-color;
+
+    transition-property: background-color;
+    transition: $delay $function;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  .adres-icon {
+    @include icon(16px, 12px, currentColor);
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-family: Raleway;
+    @include fon(500, 26px, 1.192, 0.03em);
+  }
+  .sait-nav-list {
+    margin-left: 93px;
+  }
+  .adress-header-list {
+    display: flex;
+  }
+  .adress-header-item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .adress-header-link {
+    @include fon(500, 14px, 1.143, 0.02em);
+  }
+}

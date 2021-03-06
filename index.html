@@ -13,17 +13,17 @@
 
 <body>
     <!--Шапка сайту-->
-    <header class="header">
+    <header class="header ">
        <div class="container">
             <nav class="sait-nav">
                 <a class="logo" href="/">Web<span class="logo-color-header">Studio</span></a>
-                <!--<ul class="sait-nav-list">
+                 <ul class="sait-nav-list">
                     <li class="sait-nav-item"><a class="sait-nav-link sait-nav-link-current" href="">Студия</a></li>
                     <li class="sait-nav-item"><a class="sait-nav-link" href="./portfolio.html">Портфолио</a></li>
                     <li class="sait-nav-item"><a class="sait-nav-link" href="">Контакты</a></li>
-                </ul> -->
+                </ul>
             </nav>
-            <!--<address class="adress-header">
+            <address class="adress-header">
                 <ul class="adress-header-list">
                     <li class="adress-header-item">
                         <a class="adress-header-link" href="mailto:info@devstudio.com">
@@ -39,22 +39,55 @@
                         </a>
                     </li>
                 </ul>
-            </address>-->
+            </address>
+            <button type="button" class="burger-dutton" data-menu-button>
+                <svg class="burger-icon">
+                    <use href="./images/Іконки/symbol-defs.svg#icon-burger"></use>
+                </svg>
+            </button>
+       </div>
+       <div class="mobile-menu" data-menu>
+           <button type="button" class="closed-batton" data-menu-close>
+                <svg class="closed-batton-ing">
+                    <use href="./images/Іконки/symbol-defs.svg#icon-close"></use>
+                </svg>
+           </button>
+            <nav>
+                <ul class="mobile-nav-list">
+                    <li class="mobile-nav-item"><a class="mobile-nav-link mobile-nav-link-current" href="">Студия</a></li>
+                    <li class="mobile-nav-item"><a class="mobile-nav-link" href="./portfolio.html">Портфолио</a></li>
+                    <li class="mobile-nav-item"><a class="mobile-nav-link" href="">Контакты</a></li>
+                </ul>
+            </nav>
+            <div>
+                <address class="mob-contakt">
+                    <ul>
+                        <li class="mob-contakt-item"><a class="mob-contakt-tel" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                        <li class="mob-contakt-item"><a class="mob-contakt-address" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                    </ul>
+                </address>
+                <Ul class="mob-social">
+                    <li class="mob-social-item"><a class="mob-social-link" href="">Instagram</a></li>
+                    <li class="mob-social-item"><a class="mob-social-link" href="">Twitter</a></li>
+                    <li class="mob-social-item"><a class="mob-social-link" href="">Facebook</a></li>
+                    <li class="mob-social-item"><a class="mob-social-link" href="">LinkedIn</a></li>
+                </Ul>
+            </div>
        </div>
     </header>
  
-    <main>
+  <!--  <main>
         
 
-        <!--Герой-->       
+        Герой      
         <section class="hero-section">
             <div class="hero container">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
                 <button data-modal-open class="hero-button" type="button">Заказать услугу</button>
             </div>
-        </section>   
+        </section>   --> 
         
-        <!--Особливості-->
+        <!--Особливості
         <section class="specionalization">
 
             <div class="specionalization-conteiner container">
@@ -104,9 +137,9 @@
 
                 </ul>
             </div>
-        </section>
+        </section>-->
 
-        <!--Чим займаэться фірма-->
+        <!--Чим займаэться фірма
         <section>
             
             <div class="container">  
@@ -156,9 +189,9 @@
 
                 </ul>
             </div>
-        </section>
+        </section>-->
         
-        <!--Команда-->
+        <!--Команда
         <section class="command">
            <div class="container">
 
@@ -168,7 +201,7 @@
 
                     <li class="command-list-item">
                         <div>
-                                <img src="./images/Команда/Демяненко.jpg"
+                                <img src="./images/Команда/Демяненко/Демяненко_desktop_x1.webp"
                                 alt="Молодой человек, в рубашке и очках" 
                                 width="270">
                             <div class="card-command-content">
@@ -219,7 +252,7 @@
 
                     <li class="command-list-item">
                         <div>
-                                <img src="./images/Команда/Репина.jpg" 
+                                <img src="./images/Команда/Репина/Репина_desktop_x1.webp" 
                                 alt="Молодая девушка с белыми волосами,  в піджаке и очках "
                                 width="270">
                             <div class="card-command-content">
@@ -270,7 +303,7 @@
 
                     <li class="command-list-item">
                         <div>
-                                <img src="./images/Команда/Тарасов.jpg" 
+                                <img src="./images/Команда/Тарасов/Тарасов_desktop_x1.jpg" 
                                 alt="Молодой человек в белой рубашке"
                                 width="270">
                             <div class="card-command-content">
@@ -320,7 +353,7 @@
 
                     <li class="command-list-item">
                         <div>
-                                <img src="./images/Команда/Ермаков.jpg" 
+                                <img src="./images/Команда/Ермаков/Ермаков_desktop_x1.jpg" 
                                 alt="Молодой человек в чорной футболке и очках"
                                 width="270">
                             <div class="card-command-content">
@@ -369,9 +402,9 @@
                     </li>
                 </ul>    
             </div>
-        </section>
+        </section>-->
     
-        <!--Клієнти-->
+        <!--Клієнти
         <section class="clients">
             <div class="container">  
                 
@@ -435,10 +468,10 @@
                 </ul>
             </div>
         </section>
-    </main>
+    </main>-->
 
 
-    <!--Підвал-->
+    <!--Підвал
     <footer class="footer">
         <div class="container">
             <div>
@@ -511,8 +544,8 @@
             </form>
     
         </div>  
-    </footer>
-    <!--Модалка-->
+    </footer>-->
+    <!--Модалка
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button data-modal-close class="modal-closed-batton" aria-label="Закрыть окно">
@@ -569,8 +602,9 @@
            </form>
               
         </div>
-    </div>
+    </div>-->
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

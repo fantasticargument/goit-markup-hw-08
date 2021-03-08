@@ -260,7 +260,8 @@ button {
     background-color: #ffffff;
     width: 100%;
     max-width: 480px;
-    height: 796px;
+    height: 100vh;
+    min-height: 568px;
     padding: 48px 40px;
     -webkit-transition: -webkit-transform 500ms linear;
     transition: -webkit-transform 500ms linear;
@@ -273,13 +274,13 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
   .mobile-menu.is-open {
     -webkit-transform: translateX(-50%) translateY(0);
             transform: translateX(-50%) translateY(0);
+  }
+  .mob-link {
+    margin-top: auto;
   }
   .mobile-nav-link {
     font-weight: 500;
@@ -320,6 +321,9 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -394,7 +398,7 @@ button {
     width: 100%;
     height: 4px;
     left: 0;
-    bottom: -22px;
+    bottom: -33px;
     background: #2196f3;
     border-radius: 2px;
   }
@@ -1395,13 +1399,16 @@ label .footer-form-title {
   }
 }
 */
-.clients .title {
+.clients {
   margin-top: 60px;
-  margin-bottom: 30px;
+}
+
+.clients .title {
   font-weight: 700;
   font-size: 28px;
   line-height: 1.179;
   letter-spacing: 0.03em;
+  margin-bottom: 30px;
 }
 
 .client-list {
@@ -1462,6 +1469,16 @@ label .footer-form-title {
 }
 
 @media screen and (min-width: 1200px) {
+  .clients {
+    margin-top: 94px;
+  }
+  .clients .title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1667;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+  }
   .client-list > .client-item {
     -ms-flex-preferred-size: calc(100% / 6 - 30px);
         flex-basis: calc(100% / 6 - 30px);
@@ -1665,6 +1682,9 @@ label .footer-form-title {
   .footer-item {
     text-align: start;
   }
+  .footer .adress {
+    margin-bottom: 0;
+  }
 }
 
 .footer-form {
@@ -1862,7 +1882,7 @@ label .footer-form-title {
 }
 
 .container .card-list {
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .card-item {
@@ -2006,6 +2026,12 @@ img {
   .card-list > .card-item {
     -ms-flex-preferred-size: calc(100% / 3 - 30px);
         flex-basis: calc(100% / 3 - 30px);
+  }
+  .buttons-list {
+    margin-top: 94px;
+  }
+  .container .card-list {
+    margin-top: 20px;
   }
 }
 /*# sourceMappingURL=main.css.map */

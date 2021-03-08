@@ -41,12 +41,14 @@
   }
 }
 */
-.clients .title {
+.clients {
   margin-top: 60px;
-  margin-bottom: 30px;
-  @include fon(700, 28px, 1.179, 0.03em);
-}
 
+  .title {
+    @include fon(700, 28px, 1.179, 0.03em);
+    margin-bottom: 30px;
+  }
+}
 .client-list {
   display: flex;
   flex-wrap: wrap;
@@ -89,6 +91,15 @@
   }
 }
 @media screen and (min-width: 1200px) {
+  .clients {
+    margin-top: 94px;
+
+    .title {
+      @include fon(700, 36px, 1.1667, 0.03em);
+      margin-bottom: 50px;
+    }
+  }
+
   .client-list > .client-item {
     flex-basis: calc(100% / 6 - 30px);
   }

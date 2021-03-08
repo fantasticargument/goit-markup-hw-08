@@ -357,6 +357,9 @@ button {
   .burger-dutton {
     display: none;
   }
+  .header .container {
+    height: 80px;
+  }
   .mobile-menu {
     display: none;
   }
@@ -1658,6 +1661,9 @@ label .footer-form-title {
   .footer-social-networks {
     margin-left: 70px;
     margin-top: 10px;
+  }
+  .footer-item {
+    text-align: start;
   }
 }
 

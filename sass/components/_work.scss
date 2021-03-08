@@ -1,0 +1,38 @@
+@media screen and (max-width: 1199px) {
+  .work {
+    display: none;
+  }
+}
+
+.specionalization-list-img {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 94px;
+}
+.specionalization-box-img {
+  width: 370px;
+  height: 294px;
+}
+
+.specionalization-item-img:not(:last-child) {
+  margin-right: 30px;
+}
+.specionalization-box {
+  position: relative;
+}
+.specionalization-box-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.specionalization-text {
+  @include fon(500, 14px, 1.143, 0.03em);
+  text-align: center;
+  color: $white-color;
+  text-transform: uppercase;
+}

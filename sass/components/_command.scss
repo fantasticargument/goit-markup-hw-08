@@ -78,3 +78,108 @@
   @include icon(20px, 20px, currentColor);
 }
 */
+.command {
+  background: #f5f4fa;
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  .title {
+    margin-bottom: 50px;
+  }
+
+  &-list-item {
+    background-color: $white-color;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &-list-name {
+    @include fon(500, 16px, 1.188, 0.03em);
+    text-align: center;
+    color: $primary-text-color;
+    margin-bottom: 10px;
+  }
+  &-list-position {
+    @include fon(400, 16px, 1.188, 0.03em);
+    text-align: center;
+    color: $accent-text-color;
+    margin-bottom: 16px;
+  }
+  &-list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+.social-networks {
+  display: flex;
+  justify-content: center;
+
+  &-item {
+    width: 20px;
+    height: 20px;
+  }
+
+  &-list:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.social-command-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  color: $social-networks;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+
+  transition-property: background-color;
+  transition: $delay $function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: $white-color;
+  }
+}
+
+.social-networks-icon {
+  @include icon(20px, 20px, currentColor);
+}
+
+.card-command-content {
+  padding: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .command-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+
+    &-item:not(:last-child) {
+      margin-bottom: 0px;
+    }
+
+    & > .command-list-item {
+      flex-basis: calc(100% / 2 - 30px);
+      margin-left: 30px;
+      margin-top: 30px;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .command-list > .command-list-item {
+    flex-basis: calc(100% / 4 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+}

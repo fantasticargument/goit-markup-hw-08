@@ -72,3 +72,102 @@
   height: 20px;
 }
 */
+
+.footer {
+  background: $background-primery;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &-title {
+    @include fon(700, 14px, 1.143, 0.03em);
+    text-transform: uppercase;
+    color: $white-color;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &-item {
+    text-align: center;
+  }
+
+  &-form-title {
+    text-align: center;
+  }
+}
+
+.adress {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.logo-footer {
+  color: $white-color;
+}
+
+.adress-street-link {
+  font-style: normal;
+  @include fon(400, 14px, 1.714, 0.03em);
+  color: $white-color;
+}
+.adress-footer-link {
+  font-style: normal;
+  @include fon(400, 14px, 1.714, 0.03em);
+  color: #ffffff99;
+}
+.footer-social-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  color: $white-color;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+
+  transition-property: background-color;
+  transition: $delay $function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $white-color;
+  }
+}
+
+.foter-social-networks-icon {
+  @include icon(20px, 20px, currentColor);
+}
+
+.foter-social-networks-item {
+  width: 20px;
+  height: 20px;
+}
+
+.adress-street-item {
+  margin-top: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-contact {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .container {
+    display: flex;
+  }
+
+  .footer-contact {
+    text-align: left;
+  }
+
+  .footer-title {
+    text-align: left;
+  }
+
+  .footer-social-networks {
+    margin-left: 70px;
+    margin-top: 10px;
+  }
+}

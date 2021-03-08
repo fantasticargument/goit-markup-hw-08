@@ -851,7 +851,7 @@ label .footer-form-title {
 
 .checkbox-form-input:checked + .checkbox-form-label::before {
   background-color: #2196f3;
-  background-image: url(../../images/галочка/Vector.svg);
+  background-image: url(../../images/mark/Vector.svg);
   background-repeat: no-repeat;
   background-size: contain;
   border: #2196f3;
